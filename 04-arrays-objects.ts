@@ -31,7 +31,7 @@ let user: {
     role: {
         description: 'student',
         id: 2300152 ,
-        isAdmin: false
+        // isAdmin: false
     }
 }
 console.log(`
@@ -39,8 +39,8 @@ console.log(`
     Age: ${user.age}` + `, 
     Hobbies: ${user.hobbies.join(", ")}` + `, 
     Role: ${user.role.description}, 
-    ID: ${user.role.id}` + `, 
-    Is Admin: ${user.role.isAdmin}`)
+    ID: ${user.role.id}`
+)
 
 // Must not null or undefined
 let val: {} = "Lia"
@@ -54,7 +54,7 @@ studentData = {
     name: 'Lia',
     age: 21,
     course: 'BSIS',
-    isEnrolled: true
+    // isEnrolled: true
 }
 
 console.log(studentData)
