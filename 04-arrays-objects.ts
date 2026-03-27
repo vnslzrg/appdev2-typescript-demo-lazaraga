@@ -1,13 +1,20 @@
-let hobbies = ["Eating", "Watching"]
+let hobbies = ["Gaming", "Coding", "Cooking"]
 
-// hobbies.push(10)
+hobbies.push("Traveling")
+console.log(hobbies)
+
+let scores1: number[] = [100, 90, 80]
+let scores2: Array<number> = [100, 90, 80]
+
+console.log(scores1)
+console.log(scores2)    
+
 
 // let userList: (string | number)[];
+
 let userList: Array<string | number>;
-
-userList = ["Elmer", "Elmer123", 123456]
-
-// console.log(userList)
+userList = ["Veneese", "VeneeseJulia", 2300152]
+console.log(userList)
 
 let user: {
     name: string;
@@ -18,23 +25,44 @@ let user: {
         id: number
     }
 } = {
-    name: "Elmer",
-    age: 31,
-    hobbies: ["Eating", "Sleeping"],
+    name: "Veneese",
+    age: 21,
+    hobbies: ["Watching", "Sleeping"],
     role: {
-        description: 'admin',
-        id: 1
+        description: 'student',
+        id: 2300152 ,
+        isAdmin: false
     }
 }
+console.log(`
+    Name: ${user.name}, 
+    Age: ${user.age}` + `, 
+    Hobbies: ${user.hobbies.join(", ")}` + `, 
+    Role: ${user.role.description}, 
+    ID: ${user.role.id}` + `, 
+    Is Admin: ${user.role.isAdmin}`)
 
 // Must not null or undefined
-let val: {} = "Elmer Alvarado"
+let val: {} = "Lia"
+console.log(val)
+
 
 // Flexible Object - Record Type
-let data: Record<string, number | string>
+let studentData: Record<string, number | string>
 
-data = {
-    1: 1,
-    name: 'Elmer'
-    // isPartTimeInstructor: true
+studentData = {
+    name: 'Lia',
+    age: 21,
+    course: 'BSIS',
+    isEnrolled: true
 }
+
+console.log(studentData)
+
+let classlist: Record<string, string[]>
+
+classlist = {
+    "BSIS 3A": ["Veneese", "Lia", "Julia"],
+    "BSIS 3B": ["Neese", "VJ", "JV"]
+}
+console.log(classlist)
