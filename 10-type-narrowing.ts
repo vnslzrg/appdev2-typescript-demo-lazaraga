@@ -1,6 +1,6 @@
-const inputEl = document.getElementById('user-name')
+const inputEl = document.getElementById('user-name') as HTMLInputElement | null
 
-console.log(inputEl.value) // This line is unsafe because inputEl might be null
+// console.log(inputEl.value) // This line is unsafe because inputEl might be null
 
 if (!inputEl) {
     throw new Error('Element not found!');
@@ -17,6 +17,8 @@ console.log(inputEl.value)
 //     throw new Error('Element not found!');
 // }
 // console.log(inputEl?.value)
+
+
 
 
 // Type Casting or Assertion
